@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+
+                // alert('HIIIII')
+                var value = $("#myInput").val().toLowerCase();    //this is used for same obj of the selector
+                // alert(value)
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().lastIndexOf(value) > -1)
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1> Filter Table.</h1>
+    <p>type Something in the input field to search the table for the names</p>
+    <input type="text" id="myInput" placeholder="Search....">
+    <br></br>
+    <table>
+        <thread>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Designation</th>
+            </tr>
+        </thread>
+        <tbody id="myTable">
+            <tr>
+                <td>Shubham</td>
+                <td>kumar</td>
+                <td>carpaintar</td>
+            </tr>
+
+            <tr>
+                <td>Pulkit</td>
+                <td>kumar</td>
+                <td>software</td>
+            </tr>
+
+            <tr>
+                <td>Shubhu</td>
+                <td>kumar</td>
+                <td>paintar</td>
+            </tr>
+
+            <tr>
+                <td>Pranjal</td>
+                <td>jain</td>
+                <td>Developer</td>
+            </tr>
+
+            <tr>
+                <td>Amit</td>
+                <td>kumar</td>
+                <td>kpo</td>
+            </tr>
+
+            <tr>
+                <td>Manish</td>
+                <td>kumar</td>
+                <td>operations</td>
+            </tr>
+
+            <tr>
+                <td>Shubham</td>
+                <td>vijay</td>
+                <td>carpaintar</td>
+            </tr>
+
+            <tr>
+                <td>ankush</td>
+                <td>Thapa</td>
+                <td>carpaintar</td>
+            </tr>
+
+            <tr>
+                <td>robin</td>
+                <td>singh</td>
+                <td>carpaintar</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

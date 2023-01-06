@@ -1,0 +1,25 @@
+
+
+<script>
+
+
+function ValidEmail(str) {
+
+var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+if (str.match(validRegex)) {
+
+  return true;
+
+} else {
+
+  return false;
+
+}
+
+}
+var email =ValidEmail("prahlad@gmaildfgh.com")
+console.log(email);
+
+
+</script>

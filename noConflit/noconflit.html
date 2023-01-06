@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <title>Document</title>
+
+    <script>
+    //   var j=    $.noConflict();
+    //       j(document).ready(function($){
+    //         $("button").click(function(){
+    //             $("p").toggle();
+    //         })
+    //       })
+
+    // -------------------------- or-----------------------0r-----------------
+       $.noConflict();
+          jQuery(document).ready(function($){
+            $("button").click(function(){
+                console.log("you hav clicked")
+                
+                $("p").toggle();
+            })
+            
+          })
+    </script>
+</head>
+<body>
+    <h1> Jquery noConflit() Method.</h1>
+    <p> This is a paragraph.</p>
+    <button>click to toggle</button>
+
+  
+
+    
+</body>
+</html>
