@@ -2,3 +2,107 @@
 for working with everything except the document the function alert/confirm /promt are also a part of the BOM. 
 
 location.href="https://googlle.com"  //redirect to another URL -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p> this is the example<br> of get<i> dsf</i> method.</p>
+    <input type="text" value="" id="username" name="">
+    <button>get value</button>
+    <script>
+        $(document).ready(function () {
+            // var ptext =$("p").text();        // alert(ptext);   // getmethod
+            // document.write(ptext);
+            $("button").click(function () {
+                var formval = $("#username").val();
+                alert(formval)
+                // document.write(formval);
+            });
+        })
+    </script>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+    $("p").on({
+        : function(){
+            $(this).css("color", "red");
+        }
+    });    
+});
+
+
+</script>
+</head>
+<body>
+    <button  id="clickchange"></button> click me </button>
+
+
+<p>Move the mouse pointer on the text to change the text color.</p>
+</body>
+</html>
+
+<script>
+
+document.getElementById('#clickchange').onclick = changeColor;   
+
+function changeColor() {
+    document.body.style.color = "purple";
+    return false;
+}
+</script> -->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>toggleClass demo</title>
+  <style>
+  p {
+    margin: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .blue {
+    color: blue;
+  }
+  .highlight {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+ 
+<p class="blue">Click to toggle</p>
+<p class="blue highlight">highlight</p>
+<p class="blue">on these</p>
+<p class="blue">paragraphs</p>
+ 
+<script>
+$( "p" ).click(function() {
+  $( this ).toggleClass( "highlight" );
+});
+</script>
+ 
+</body>
+</html>

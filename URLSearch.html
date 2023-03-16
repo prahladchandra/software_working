@@ -1,0 +1,73 @@
+<!-- get
+     Set
+    toSting Method in URL Params. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> URL SearchParms-</h1>
+    <!-- <p> this is Arcgate</p>
+    <button id="btn-addClass">addClass</button> -->
+
+
+    <script>
+
+
+        const queryStr = 'name=Dom&age=45&occupation=Software+Developer'
+        const usp = new URLSearchParams(queryStr);      //Object URLSearchParms
+
+
+        const myName = usp.get('name');
+        console.log(`value for 'name': ${myName}`);
+
+        usp.set('name', 'prahlad');
+        usp.set('youtuber', 'decode');
+
+
+
+        for (let [key,value] of usp) {
+            console.log(`${key} =>  ${value}`);
+            document.write(`${key} => ${value} <br> </br>`);
+        }
+
+
+        console.log(usp.toString());     
+                    // toString Mehtod. send back to original string.
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- get Attribute href value -->
+<script>
+// let attrValue1= $("link").attr("href")
+// console.log(attrValue1) 
+
+
+
+let queryString= window.location.search
+let urlParm=new URLSearchParams(queryString);
+console.log(urlParm);
+let value=urlParm.get('ved');
+console.log(value);
+
+// get url key or value using URL Params.
+
+
+
+</script>
+
+

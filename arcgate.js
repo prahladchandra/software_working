@@ -16,16 +16,31 @@
 // // console.log(xyz);
 
 // // //or ..................
-// // xyz = []; 
-// // var links = document.querySelectorAll('header ul li a');
-// // console.log(links);
-// // for (let myArray of links) {
-// //     if (myArray.Text != '' ){          
-// //     xyz.push({ 'Name':myArray.text, 'link': myArray.href});
+
+//javascript ....................................................................................
+xyz = []; 
+var links = document.querySelectorAll('header ul li a');
+console.log(links);
+for (let myArray of links) {
+    if (myArray.Text != '' ){          
+    xyz.push({ 'Name':myArray.text, 'link': myArray.href});
  
-// // }
-// // }
-// // console.log(xyz);
+}
+}
+console.log(xyz);
+
+// jQuery..........................................................
+
+
+const text5 = $("header").find(" a")
+
+const youtube1 = text5.map(function(index,el){
+     // console.log("hiiii",youtube1)
+  return el.href
+})
+
+console.log(youtube1)
+// ---------------------------------------------------------------------------------------------------------------
 
 // // //or footer
 // // xyz = []; 
@@ -38,16 +53,16 @@
 // // }
 // // }
 // // console.log(xyz);
-// // //or Vidioes.....................
+or Vidioes.....................
 
 
-// // var VideoUrl=[];
-// // var x=document.getElementsByClassName("various fancybox.iframe")
-// // for(let links of x){
+var VideoUrl=[];
+var x=document.getElementsByClassName("various fancybox.iframe")
+for(let links of x){
     
-// //     VideoUrl.push({'Youtubelink': links.href});
-// // }
-// // console.log(VideoUrl);
+    VideoUrl.push({'Youtubelink': links.href});
+}
+console.log(VideoUrl);
 
 
 
@@ -347,6 +362,31 @@
 
 // var profile_data = getprofile();
 // console.log(profile_data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ----------------------------------------------------or List Exibhiter....................................
 
 // var Exibitor=[];
@@ -364,15 +404,15 @@
 //------------------------------------------------------------or-----------------------------------
 
 
-{/* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script> // cdn for jqueary */}
-var Exibitor=[];
-var x=document.getElementsByClassName("slick-cell l1 cell-text")
-for(let nameItem of x){
-     console.log(nameItem.innerText);      
+/* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script> // cdn for jqueary */}
+// var Exibitor=[];
+// var x=document.getElementsByClassName("slick-cell l1 cell-text")
+// for(let nameItem of x){
+//      console.log(nameItem.innerText);      
 
-    Exibitor.push({'Exibitor':nameItem.innerText});
-}
+//     Exibitor.push({'Exibitor':nameItem.innerText});
+// }
 
 
-console.log(Exibitor);
+// console.log(Exibitor);
     

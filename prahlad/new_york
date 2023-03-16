@@ -1,0 +1,80 @@
+// const newyork=[];
+
+// const Exibitor_Booth_Name=document.getElementsByClassName("boothLabel")
+// for (let item of exb)
+//     {
+//         newyork.push({"Exibitor_Booth_Name":item.text})
+//     } 
+// const exhibitorName =document.getElementsByClassName("exhibitorName")
+// for (let item of exb)
+//     {
+//         newyork.push({"Exibitor_Name":item.text})
+//     } 
+
+//  console.log(newyork);
+
+
+
+var hpkt = [];
+// var data = [];
+// var exhi = [];
+$.ajax({
+    type: "get",
+    url: 'https://www.highpointmarket.org/api/exhibitors/autocomplete',
+    data: 'json',
+    success: function (response) {
+
+        // var result = response;
+        for (var i = 0; i < response.length; i++) {
+        //     exhi.push(response[i].value);
+        // }
+
+        // for (let i = 0; i < exhi.length; i++) {
+            $.ajax({
+                type: "GET",
+                url: "https://www.highpointmarket.org" + response.length.value,
+                success: function (response) {
+                    var result1 = response;
+                    var text1 = $(response).find(".exhibitor-contain").find("h1").text();
+                    var text2 = $(response).find(".info-block").find(" span").text()
+                    var text3 = $(response).find(".info-block").find(" p:nth-child(3)").text()
+                    var text4 = $(response).find(".col-12").find("p").text()
+
+                    hpkt.push({ "Exihibior_NAME": text1, "Address": text2.trim(),"WebsiteURL": text3.trim(),"Discriptions": text4.trim()})
+
+                }
+        
+            
+            });
+        }
+    }
+});
+console.log(hpkt)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$.ajax({
+    type: "GET",
+    url: 'https://himss23.mapyourshow.com/8_0/floorplan/02/_remote-proxy.cfm?action=GetBoothByHall&hallID=S&selectedbooth=2643&objectType=booth&_=1676625745190',
+    data: "jsonp",
+    success: function (responseJSON){
+        var ddd=(responseJSON.DATA)
+
+   
+            for(let item in ddd[0]){
+               document.write(item[3])
+        }
+      
+    }
+});

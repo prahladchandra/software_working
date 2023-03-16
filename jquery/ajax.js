@@ -30,9 +30,9 @@ function buttonClickHandler() {
         }
     }
     // send the request
-    params = `{"name":"prahlad2134","salary":"123","age":"23"}`;
+    params = `{"name":"Raghu234134","salary":"589953","age":"243"}`;
     xhr.send(params);
-    console.log("We are done!");
+    console.log(params);
 }
 
 
