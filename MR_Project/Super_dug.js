@@ -1,3 +1,4 @@
+// Target URL:https://s15.a2zinc.net/clients/hartenergy/permian23/public/EventMap.aspx
 const Super_Dug = [];
 for (var i = 0; i < boothsInthisTile.length; i++) {
      if(boothsInthisTile[i].name != '' && boothsInthisTile[i].name != 'Sponsorship Required (Available)'){
